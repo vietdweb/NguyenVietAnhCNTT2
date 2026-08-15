@@ -28,13 +28,14 @@ VietAnhCNTT2/               (root repository)
 ├── .vs/                   (Visual Studio hidden files)
 ├── VietAnhCNTT2.slnx      (solution file)
 ├── README.md
-└── VietAnhCNTT2/          (project folder)
-	├── VietAnhCNTT2.csproj
-	├── Program.cs
-	├── Student.cs
-	├── StudentService.cs
-	├── StudentConsoleView.cs
-	└── VietAnhCNTT2MenuManager.cs
+└── BVN1/                  (project folder)
+    ├── BVN1.csproj
+    ├── Program.cs
+    ├── MenuManager.cs
+    ├── Student.cs
+    ├── StudentService.cs
+    ├── StudentConsoleView.cs
+    └── StudentValidator.cs
 ```
 
 ---
