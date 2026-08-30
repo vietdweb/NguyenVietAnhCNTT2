@@ -2,4 +2,5 @@
   <Project Path="BVN1/BVN1.csproj" />
   <Project Path="BVN2/MyApp/MyApp.csproj" Id="65887e5a-de87-438f-9915-3c90d765b26c" />
   <Project Path="BVN2/MyAppMVC/MyAppMVC.csproj" Id="6ac1131a-a041-44b3-a36c-f472a0e92ab3" />
+  <Project Path="BVN3/NvaLessson3/NvaLessson3.csproj" Id="e3ad0307-fde7-45f3-bdcb-eee8536841b1" />
 </Solution>

@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Sản phẩm";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>DANH MỤC</h3>
+
+            <div class="list-group">
+                @foreach (Category category in ViewBag.Categories)
+                {
+                    <a asp-controller="Product" asp-action="Category" asp-route-categoryId="@category.Id"
+                       class="list-group-item list-group-item-action @(ViewBag.SelectedCategoryId == category.Id ? "active" : "")">
+                        @category.Name
+                    </a>
+                }
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <h2>Danh sách sản phẩm</h2>
+
+            <div class="row">
+                    @foreach (Product product in ViewBag.Products)
+                    {
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="@product.Image" class="card-img-top" style="height: 220px; object-fit: cover;" />
+
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    @product.Name
+                                </h5>
+
+                                <p class="text-decoration-line-through text-muted">
+                                    Giá cũ: @product.Price.ToString("N0") đ
+                                </p>
+
+                                <p class="text-danger fw-bold">
+                                    Giá: @product.SalePrice.ToString("N0") đ
+                                </p>
+
+                                <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id" class="btn btn-success w-100">
+                                    Chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

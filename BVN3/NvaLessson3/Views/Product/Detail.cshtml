@@ -1,0 +1,50 @@
+@model NvaLessson3.Models.Product
+
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+}
+
+<div class="container mt-4">
+    <h2>Chi tiết sản phẩm</h2>
+
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <img src="@Model.Image" alt="@Model.Name" class="img-fluid" />
+        </div>
+
+        <div class="col-md-8">
+            <h3>Sản phẩm: @Model.Name</h3>
+
+            <p class="fs-5 text-decoration-line-through text-muted">
+                Giá gốc: @Model.Price.ToString("N0") đ
+            </p>
+
+            <p class="fs-5 text-danger fw-bold">
+                Giá mới: @Model.SalePrice.ToString("N0") đ
+            </p>
+
+            <h5>Mô tả:</h5>
+            <p>@Model.Description</p>
+
+            <p class="fs-5">
+                Trạng thái:
+                @if (Model.Status)
+                {
+                    <span class="text-success">Còn hàng</span>
+                }
+                else
+                {
+                    <span class="text-danger">Hết hàng</span>
+                }
+            </p>
+
+            <p class="fs-5">
+                Ngày đăng: @Model.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")
+            </p>
+
+            <a asp-controller="Product" asp-action="Index" class="btn btn-danger">
+                Về danh sách
+            </a>
+        </div>
+    </div>
+</div>
