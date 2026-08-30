@@ -25,17 +25,45 @@
 
 ```
 VietAnhCNTT2/               (root repository)
-├── .vs/                   (Visual Studio hidden files)
-├── VietAnhCNTT2.slnx      (solution file)
+├── VietAnhCNTT2.slnx          (solution file)
 ├── README.md
-└── BVN1/                  (project folder)
-    ├── BVN1.csproj
-    ├── Program.cs
-    ├── MenuManager.cs
-    ├── Student.cs
-    ├── StudentService.cs
-    ├── StudentConsoleView.cs
-    └── StudentValidator.cs
+├── BVN1/                       (console application)
+│   ├── BVN1.csproj
+│   ├── Program.cs
+│   ├── MenuManager.cs
+│   ├── Student.cs
+│   ├── StudentService.cs
+│   ├── StudentConsoleView.cs
+│   └── StudentValidator.cs
+├── BVN2/
+│   ├── MyApp/                  (ASP.NET Core Razor Pages application)
+│   │   ├── MyApp.csproj
+│   │   ├── Program.cs
+│   │   ├── Pages/              (Razor Pages and shared layouts)
+│   │   ├── wwwroot/            (CSS, JavaScript and client libraries)
+│   │   ├── Properties/         (launch settings)
+│   │   └── appsettings*.json
+│   └── MyAppMVC/               (ASP.NET Core MVC application)
+│       ├── MyAppMVC.csproj
+│       ├── Program.cs
+│       ├── Controllers/
+│       ├── Models/
+│       ├── Views/
+│       ├── wwwroot/
+│       ├── Properties/
+│       └── appsettings*.json
+└── BVN3/
+    └── NvaLessson3/            (ASP.NET Core MVC application)
+        ├── NvaLessson3.csproj
+        ├── Program.cs
+        ├── Controllers/
+        ├── Models/
+        ├── Views/
+        ├── wwwroot/
+        ├── Properties/
+        ├── appsettings*.json
+        ├── 1.cshtml
+        └── test.html
 ```
 
 ---
