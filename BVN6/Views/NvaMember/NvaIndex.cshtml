@@ -1,0 +1,61 @@
+﻿
+@model IEnumerable<BVN6.Models.NvaMember>
+
+@{
+    ViewData["Title"] = "NvaIndex";
+}
+
+<h1>NvaIndex</h1>
+
+<p>
+    <a asp-action="NvaCreate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NvaMemberId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NvaMemberUserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NvaMemberPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NvaMemberEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NvaMemberFullName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NvaMemberId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NvaMemberUserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NvaMemberPassword)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NvaMemberEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NvaMemberFullName)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "NvaEdit", new { id = item.NvaMemberId }) |
+                    @Html.ActionLink("NvaDetails", "NvaGetDetails", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("NvaDelete", "NvaDelete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

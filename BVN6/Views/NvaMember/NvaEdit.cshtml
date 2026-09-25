@@ -1,0 +1,45 @@
+﻿@model BVN6.Models.NvaMember
+@{
+    ViewData["Title"] = "NvaEdit";
+}
+<h4>NvaMember</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NvaEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NvaMemberId" class="control-label"></label>
+                <input asp-for="NvaMemberId" class="form-control" />
+                <span asp-validation-for="NvaMemberId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NvaMemberUserName" class="control-label"></label>
+                <input asp-for="NvaMemberUserName" class="form-control" />
+                <span asp-validation-for="NvaMemberUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NvaMemberPassword" class="control-label"></label>
+                <input asp-for="NvaMemberPassword" class="form-control" />
+                <span asp-validation-for="NvaMemberPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NvaMemberEmail" class="control-label"></label>
+                <input asp-for="NvaMemberEmail" class="form-control" />
+                <span asp-validation-for="NvaMemberEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NvaMemberFullName" class="control-label"></label>
+                <input asp-for="NvaMemberFullName" class="form-control" />
+                <span asp-validation-for="NvaMemberFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="NvaIndex">Back to List</a>
+</div>
