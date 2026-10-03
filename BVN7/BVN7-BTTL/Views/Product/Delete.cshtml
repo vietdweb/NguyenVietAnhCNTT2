@@ -1,0 +1,37 @@
+﻿@model BVN7_BTTL.Models.Product
+
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+
+<h1>Xóa sản phẩm</h1>
+
+<h4>Bạn có chắc muốn xóa sản phẩm này không?</h4>
+
+<p>
+    <b>Tên sản phẩm:</b>
+    @Model.Name
+</p>
+
+<p>
+    <b>Giá:</b>
+    @Model.Price
+</p>
+
+<form asp-action="DeleteConfirmed"
+      method="post">
+
+    <input type="hidden"
+           name="id"
+           value="@Model.Id" />
+
+    <button type="submit"
+            class="btn btn-danger">
+        Xóa
+    </button>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">
+        Hủy
+    </a>
+</form>

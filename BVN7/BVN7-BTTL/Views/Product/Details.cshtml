@@ -1,0 +1,62 @@
+﻿@model BVN7_BTTL.Models.Product
+
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+}
+
+<h1>Chi tiết sản phẩm</h1>
+
+<p>
+    <b>Id:</b>
+    @Model.Id
+</p>
+
+<p>
+    <b>Tên sản phẩm:</b>
+    @Model.Name
+</p>
+
+<p>
+    <b>Giá:</b>
+    @Model.Price
+</p>
+
+<p>
+    <b>Giá khuyến mãi:</b>
+    @Model.SalePrice
+</p>
+
+<p>
+    <b>Danh mục:</b>
+    @Model.CategoryId
+</p>
+
+<p>
+    <b>Mô tả:</b>
+    @Model.Description
+</p>
+
+<p>
+    <b>Hình ảnh:</b>
+</p>
+
+@if (!string.IsNullOrEmpty(Model.Image))
+{
+    <img src="~/products/@Model.Image"
+         width="200"
+         height="150" />
+}
+
+<br />
+<br />
+
+<a asp-action="Edit"
+   asp-route-id="@Model.Id"
+   class="btn btn-warning">
+    Sửa
+</a>
+
+<a asp-action="Index"
+   class="btn btn-secondary">
+    Quay lại
+</a>
