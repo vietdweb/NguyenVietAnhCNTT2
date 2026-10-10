@@ -8,4 +8,6 @@
   <Project Path="BVN6/BVN6.csproj" Id="c6b11e8c-1c99-4786-af03-f29caff71bda" />
   <Project Path="BVN7/BVN7-BTTL/BVN7-BTTL.csproj" Id="4eb50c31-e249-438b-95db-f51e2e0a756c" />
   <Project Path="BVN7/NetCoreMVCLAB5/NetCoreMVCLAB5.csproj" Id="b3a4e8e4-1d68-418d-bfd0-67ca3fdd7cfe" />
+  <Project Path="BVN8/BVN8.csproj" Id="33eb2521-68fb-4d46-b2a3-3d13c877f46c" />
+  <Project Path="ontap/ontap.csproj" Id="7cdbe4a9-3583-4b60-96a4-25a8f1064fee" />
 </Solution>
