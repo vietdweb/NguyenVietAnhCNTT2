@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - BVN9 Admin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-4">
+    <div class="container">
+        <a class="navbar-brand" asp-area="Admin" asp-controller="Category" asp-action="Index">BVN9 Admin</a>
+        <div class="navbar-nav">
+            <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+            <a class="nav-link" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+            <a class="nav-link" asp-area="Admin" asp-controller="Banner" asp-action="Index">Banner</a>
+            <a class="nav-link" asp-area="Admin" asp-controller="Blog" asp-action="Index">Blog</a>
+        </div>
+    </div>
+</nav>
+<main class="container pb-5">
+    @if (TempData["Error"] is string error) { <div class="alert alert-danger">@error</div> }
+    @RenderBody()
+</main>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

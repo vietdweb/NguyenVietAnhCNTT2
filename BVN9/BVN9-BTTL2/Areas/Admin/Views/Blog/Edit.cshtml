@@ -1,0 +1,3 @@
+@model Blog
+@{ ViewData["Title"] = "Sửa Blog"; }<h1>Sửa Blog</h1><form asp-action="Edit" method="post"><partial name="_Form" model="Model" /><button class="btn btn-primary">Lưu</button> <a asp-action="Index" class="btn btn-secondary">Hủy</a></form>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

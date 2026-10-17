@@ -1,0 +1,2 @@
+@model Blog
+@{ ViewData["Title"] = "Xóa Blog"; }<h1>Xóa Blog</h1><p>Bạn có chắc muốn xóa <strong>@Model.Name</strong>?</p><form asp-action="Delete" method="post"><input asp-for="Id" type="hidden" /><button class="btn btn-danger">Xóa</button> <a asp-action="Index" class="btn btn-secondary">Hủy</a></form>
